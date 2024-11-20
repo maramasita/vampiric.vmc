@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        background-color: #111;
+        color: #fff;
+    }
+    
+    .checkout-container {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        background-color: #222;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #444;
+        border-radius: 4px;
+        background-color: #333;
+        color: #ddd;
+    }
+    
+    .section {
+        padding: 15px;
+        background-color: #333;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .section h3 {
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    
+    .shipping-option,
+    .payment-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #444;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .shipping-cost {
+        color: #ddd;
+    }
+    
+    .payment-icons img {
+        width: 30px;
+        margin-right: 5px;
+    }
+    
+    .note {
+        font-size: 12px;
+        color: #888;
+        margin-top: 5px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <!-- Postal Code and Phone Fields -->
+        <div class="form-group">
+            <label for="postal-code">Postal Code (optional)</label>
+            <input type="text" id="postal-code" placeholder="Enter postal code">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" placeholder="Enter phone number">
+        </div>
+
+        <!-- Shipping Method -->
+        <div class="section">
+            <h3>Shipping Method</h3>
+            <div class="shipping-option">
+                <label>
+                    <input type="radio" name="shipping" value="local-delivery" checked>
+                    <span>Local Delivery (2-3 Days)</span>
+                </label>
+                <span class="shipping-cost">$2.00</span>
+                <p>(Phnom Penh Only)</p>
+            </div>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="section">
+            <h3>Payment</h3>
+            <p>All transactions are secure and encrypted.</p>
+            <div class="payment-option">
+                <label>
+                    <input type="radio" name="payment" value="online-payment">
+                    <span>Online Payments</span>
+                    <div class="payment-icons">
+                        <img src="visa.png" alt="Visa">
+                        <img src="mastercard.png" alt="Mastercard">
+                        <img src="jcb.png" alt="JCB">
+                    </div>
+                </label>
+                <p class="note">After clicking "Pay now," you will be redirected to complete your purchase securely.</p>
+            </div>
+            <div class="payment-option">
+                <label>
+                    <input type="radio" name="payment" value="cash-on-delivery">
+                    <span>Cash on Delivery (COD)</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Billing Address -->
+        <div class="section">
+            <h3>Billing Address</h3>
+            <label>
+                <input type="radio" name="billing" value="same-as-shipping" checked>
+                <span>Same as shipping address</span>
+            </label>
+            <label>
+                <input type="radio" name="billing" value="different-address">
+                <span>Use a different billing address</span>
+            </label>
+        </div>
+
+        <!-- Order Summary (Placeholder) -->
+        <div class="section">
+            <h3>Order Summary</h3>
+            <!-- Order details will go here -->
+        </div>
+    </div>
+</body>
+</html>
